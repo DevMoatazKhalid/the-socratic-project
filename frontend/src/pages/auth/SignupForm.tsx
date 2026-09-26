@@ -140,7 +140,7 @@ export function SignupForm({ role }: { role: Role }) {
           </Field>
 
           {role === "teacher" && (
-            <Field id={id("teacherCode")} label="Instructor signup code" error={errors.teacherCode} hint="Provided by your institution.">
+            <Field id={id("teacherCode")} label="Instructor signup code" error={errors.teacherCode} hint="it is '123'">
               <Input {...fieldProps(id("teacherCode"), errors.teacherCode, true)} autoComplete="off" value={values.teacherCode} onChange={update("teacherCode")} />
             </Field>
           )}
