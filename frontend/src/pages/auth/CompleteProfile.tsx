@@ -31,7 +31,7 @@ export default function CompleteProfile() {
     setError(null)
     if (!v.firstName.trim() || !v.lastName.trim()) return setError("Enter your first and last name.")
     if (!v.universityId) return setError("Choose your university.")
-    if (v.role === "PROFESSOR" && !v.teacherCode.trim()) return setError("Enter the instructor signup code from your institution.")
+    if (v.role === "PROFESSOR" && !v.teacherCode.trim()) return setError("Enter the instructor signup code from your institution. it is 123")
     setBusy(true)
     try {
       await completeProfile({ firstName: v.firstName.trim(), lastName: v.lastName.trim(), role: v.role as "STUDENT" | "PROFESSOR", universityId: v.universityId, teacherCode: v.teacherCode || undefined })
