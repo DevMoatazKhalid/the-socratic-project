@@ -70,7 +70,7 @@ export default function CompleteProfile() {
           </Select>
         </Field>
         {v.role === "PROFESSOR" && (
-          <Field id="cp-code" label="Instructor signup code" hint="Provided by your institution.">
+          <Field id="cp-code" label="Instructor signup code" hint="it is '123' ">
             <Input {...fieldProps("cp-code", undefined, true)} autoComplete="off" value={v.teacherCode} onChange={(e) => setV({ ...v, teacherCode: e.target.value })} />
           </Field>
         )}
