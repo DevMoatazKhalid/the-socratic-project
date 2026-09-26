@@ -27,7 +27,7 @@ function validate(v: Values, role: Role): Errors {
   else if (v.password.length < 8) e.password = "Use a password of at least 8 characters."
   if (!v.confirm) e.confirm = "Type your password again to confirm it."
   else if (v.password && v.confirm !== v.password) e.confirm = "Passwords don't match."
-  if (role === "teacher" && !v.teacherCode.trim()) e.teacherCode = "Enter the instructor signup code from your institution."
+  if (role === "teacher" && !v.teacherCode.trim()) e.teacherCode = "Enter the instructor signup code from your institution. (it is '123') "
   return e
 }
 
